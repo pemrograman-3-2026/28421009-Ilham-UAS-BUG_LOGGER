@@ -22,7 +22,7 @@ export default function AddProject() {
        
       });
       showToast(res.data.message, "success");
-      router.push("/admin/project");
+      router.push("/admin/projects/add/all");
     } catch (error) {
       showToast("Gagal menambahkan project", "danger");
       console.error("Error adding project:", error);

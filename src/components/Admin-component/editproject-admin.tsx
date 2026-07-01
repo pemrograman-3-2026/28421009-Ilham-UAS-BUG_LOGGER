@@ -41,7 +41,7 @@ export default function EditProjects() {
         stack,
       });
       showToast(res.data.message, "success");
-      router.push("/admin/projects");
+      router.push("/admin/projects/add/all");
     } catch (error) {
       showToast("Gagal mengupdate laporan bug", "danger");
       console.error("Error updating bug:", error);
@@ -52,7 +52,7 @@ export default function EditProjects() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h4>Edit Laporan Bug</h4>
-        <Link href="/admin/projects">
+        <Link href="/admin/projects/add/all">
           <button className="btn btn-sm btn-primary" type="button">
             Kembali
           </button>
@@ -85,8 +85,8 @@ export default function EditProjects() {
               <label className="form-label">Status</label>
               <select
                 className="form-select"
-                value={status}
-                onChange={(e) => setStatus(e.target.value)}
+                value={stack}
+                onChange={(e) => setStack(e.target.value)}
               >
                 <option value="">Pilih Stack</option>
                 <option value="frontend">Frontend</option>
