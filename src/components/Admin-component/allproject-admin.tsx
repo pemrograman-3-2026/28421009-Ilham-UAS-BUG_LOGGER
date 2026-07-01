@@ -52,6 +52,11 @@ export default function AllProjects() {
         <h1 className="mb-4">Projek Terdaftar</h1>
         
       </div>
+       <Link href="/admin/projects/add">
+          <button className="btn btn-sm btn-primary" type="button">
+            Tambah Projek
+          </button>
+        </Link>
     
       <div className="row g-4 mt-2">
         {projects.map((projects) => (

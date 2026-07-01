@@ -1,12 +1,12 @@
 'use client'
-import { LayoutDashboard,  PanelsTopLeft, Video } from "lucide-react";
+import { Bug, LayoutDashboard,  PanelsTopLeft, UserRound, Video } from "lucide-react";
 import Link from "next/link";
 
 const navItems = [
   { to: "/admin", icon: <LayoutDashboard />, label: "Dashboard" },
-  { to: "/admin/projects/add", icon: <PanelsTopLeft />, label: "Tambah Project" },
   { to: "/admin/projects/add/all", icon: <PanelsTopLeft />, label: "Semua Project" },
-  { to: "/admin/movie", icon: <Video />, label: "Movie" },
+  { to: "/admin/bug/", icon: <Bug />, label: "Semua Laporan" },
+  { to: "/admin/user/", icon: <UserRound />, label: "Semua User" },
   { to: "/admin/transaction", icon: <Video />, label: "Transaction" },
 ];
 
