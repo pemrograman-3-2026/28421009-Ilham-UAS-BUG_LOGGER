@@ -77,8 +77,16 @@ export default function AllBugReports() {
             <tr key={d.id}>
               <td>{d.name}</td>
               <td>{d.description}</td>
-              <td>{d.status}</td>
-              <td>{d.priority}</td>
+              <td className="text-center">
+                <span className={`badge ${d.status === 'open' ? 'bg-primary' : d.status === 'in progress' ? 'bg-warning' : 'bg-success'}`}>
+                  {d.status}
+                </span>
+              </td>
+              <td className="text-center">
+                <span className={`badge ${d.priority === 'high' ? 'bg-danger' : d.priority === 'medium' ? 'bg-warning' : 'bg-success'}`}>
+                  {d.priority}
+                </span>
+              </td>
               <td>{d.user.name}</td>
               <td>{d.project.name}</td>
               {/* <td>{d.created_at}</td> */}
