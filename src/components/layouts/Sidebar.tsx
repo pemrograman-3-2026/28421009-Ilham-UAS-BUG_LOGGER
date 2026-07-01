@@ -7,7 +7,6 @@ const navItems = [
   { to: "/admin/projects/add/all", icon: <PanelsTopLeft />, label: "Semua Project" },
   { to: "/admin/bug/", icon: <Bug />, label: "Semua Laporan" },
   { to: "/admin/user/", icon: <UserRound />, label: "Semua User" },
-  { to: "/admin/transaction", icon: <Video />, label: "Transaction" },
 ];
 
 export default function Sidebar(

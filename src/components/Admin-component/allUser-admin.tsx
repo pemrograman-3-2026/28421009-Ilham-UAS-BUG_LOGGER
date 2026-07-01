@@ -45,6 +45,11 @@ export default function AllUsers() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
       <h4>Tabel User</h4>
+      <Link href="/admin/user/add">
+          <button className="btn btn-sm btn-primary" type="button">
+            Tambah User
+            </button>
+            </Link>
     
       </div>
       {/* {data.toString()} */}
@@ -74,6 +79,7 @@ export default function AllUsers() {
               <td>
                 <div className="d-flex gap-1">
                   <Link href={`/admin/user/${user.id}`}><button className="btn btn-sm btn-primary" type="button">Edit</button></Link>
+                  <Link href={`/admin/user/changepass/${user.id}`}><button className="btn btn-sm btn-primary" type="button">Ganti Password</button></Link>
                   <button onClick={() => deleteUser(user.id)} className="btn btn-sm btn-danger" type="button">Hapus</button>
                   
                 </div>
